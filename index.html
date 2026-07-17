@@ -561,6 +561,103 @@
   .icon-btn svg{ width:18px; height:18px; }
 
   /* =========================================================
+     FOTOS DE LOS NOVIOS
+  ========================================================= */
+
+  /* --- Foto tras el hero: retrato grande enmarcado --- */
+  .photo-intro{ padding-top:clamp(56px,12vw,84px); }
+  .photo-intro-frame{
+    position:relative;
+    max-width:380px;
+    margin:0 auto;
+    border-radius:var(--radius-lg);
+    overflow:hidden;
+    box-shadow:var(--shadow-cream);
+    border:1px solid rgba(197,160,89,.5);
+  }
+  .photo-intro-frame::after{
+    content:'';
+    position:absolute; inset:0;
+    border-radius:var(--radius-lg);
+    box-shadow:inset 0 0 0 6px rgba(250,249,246,.9);
+    pointer-events:none;
+  }
+  .photo-intro-frame img{
+    width:100%;
+    aspect-ratio:3/4;
+    object-fit:cover;
+    object-position:50% 30%;
+  }
+  .photo-intro-caption{
+    text-align:center;
+    margin-top:22px;
+  }
+  .photo-intro-caption .cursive{
+    font-family:'Great Vibes', cursive;
+    font-size:clamp(2.1rem,7vw,2.6rem);
+    color:var(--burgundy);
+    line-height:1;
+  }
+  .photo-intro-caption .sub{
+    font-size:.78rem;
+    letter-spacing:.24em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-top:8px;
+  }
+
+  /* --- Foto separadora a sangre entre El Programa y El Lugar --- */
+  .photo-divider{
+    position:relative;
+    width:100%;
+    height:clamp(320px,62vw,460px);
+    overflow:hidden;
+  }
+  .photo-divider img{
+    width:100%; height:100%;
+    object-fit:cover;
+    object-position:50% 35%;
+  }
+  .photo-divider::before{
+    content:'';
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(74,18,26,.05) 0%, rgba(46,16,21,.15) 55%, rgba(46,16,21,.72) 100%);
+  }
+  .photo-divider-text{
+    position:absolute; left:0; right:0; bottom:0;
+    padding:0 28px clamp(26px,6vw,36px);
+    text-align:center;
+    color:var(--cream);
+  }
+  .photo-divider-text p{
+    font-family:'Playfair Display', serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:clamp(1.15rem,4.4vw,1.4rem);
+    max-width:360px;
+    margin:0 auto;
+    text-shadow:0 2px 14px rgba(0,0,0,.35);
+  }
+  .photo-divider-text .eyebrow{ color:var(--gold-bright); margin-bottom:10px; }
+
+  /* --- Foto de pareja antes del RSVP --- */
+  .rsvp-photo{
+    max-width:220px;
+    margin:0 auto 34px;
+    border-radius:var(--radius-lg);
+    overflow:hidden;
+    box-shadow:var(--shadow-cream);
+    border:1px solid rgba(197,160,89,.5);
+    transform:rotate(-2deg);
+  }
+  .rsvp-photo img{
+    width:100%;
+    aspect-ratio:4/5;
+    object-fit:cover;
+    object-position:50% 25%;
+  }
+
+  /* =========================================================
      FOOTER
   ========================================================= */
   .footer{
@@ -648,21 +745,20 @@
   </a>
 </header>
 
-<!-- ============================================================
-     CÓMO AÑADIR UNA FOTO VUESTRA (ejemplo listo para usar)
-     Descomenta el bloque de abajo y pégalo donde quieras (p.ej.
-     justo aquí, entre el hero y la sección "El Programa") para
-     mostrar una foto de pareja con el mismo estilo del resto de
-     la web. Sustituye la URL de la imagen por la vuestra.
-
-<section class="section section-cream">
+<!-- =========================================================
+     FOTO · PRIMER PLANO TRAS EL HERO
+========================================================= -->
+<section class="section section-cream photo-intro">
   <div class="container">
-    <img src="fotos/carlos-y-sara.jpg" alt="Carlos y Sara"
-         style="width:100%; border-radius:22px; box-shadow:0 14px 34px rgba(74,18,26,.14);">
+    <div class="photo-intro-frame reveal">
+      <img src="_J3A4360.jpg" alt="Carlos y Sara junto al río" loading="lazy">
+    </div>
+    <div class="photo-intro-caption reveal">
+      <p class="cursive">Carlos &amp; Sara</p>
+      <p class="sub">19 · Septiembre · 2026</p>
+    </div>
   </div>
 </section>
-
-============================================================= -->
 
 <!-- =========================================================
      TIMELINE
@@ -747,6 +843,17 @@
 </section>
 
 <!-- =========================================================
+     FOTO · SEPARADOR A SANGRE
+========================================================= -->
+<div class="photo-divider reveal">
+  <img src="_J3A4339 (1).jpg" alt="Carlos y Sara cogidos de la mano en un puente de madera" loading="lazy">
+  <div class="photo-divider-text">
+    <p class="eyebrow">5 años juntos</p>
+    <p>Y ahora, un camino que recorreremos de la mano para siempre</p>
+  </div>
+</div>
+
+<!-- =========================================================
      LOCATION
 ========================================================= -->
 <section id="location" class="section section-burgundy">
@@ -790,6 +897,9 @@
 ========================================================= -->
 <section id="rsvp" class="section section-cream">
   <div class="container">
+    <div class="rsvp-photo reveal">
+      <img src="_Z7A7993 (1).jpg" alt="Retrato de Carlos y Sara" loading="lazy">
+    </div>
     <p class="eyebrow eyebrow-dark reveal">Confirmación</p>
     <h2 class="section-title reveal">¿Nos acompañas?</h2>
     <div class="ornament reveal">
