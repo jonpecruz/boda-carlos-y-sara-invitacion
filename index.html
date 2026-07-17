@@ -845,18 +845,29 @@
 <!-- =========================================================
      FOTO · SEPARADOR A SANGRE
 ========================================================= -->
-<div class="photo-divider reveal">
-  <img 
-    src="foto3.jpg" 
-    alt="Carlos y Sara" 
-    loading="lazy"
-    style="object-fit: contain; background-color: #f7f7f7; width: 100%; height: auto; max-height: 500px; display: block; margin: 0 auto;"
-  >
-  <div class="photo-divider-text" style="position: relative; margin-top: -20px; z-index: 2;">
-    <p class="eyebrow">5 años juntos</p>
-    <p>Y ahora, un camino que recorreremos de la mano para siempre</p>
+<section class="section" style="background: linear-gradient(to bottom, var(--cream) 0%, var(--cream-soft) 100%); padding: 44px 0;">
+  <div class="container" style="display: flex; flex-direction: column; align-items: center;">
+    
+    <!-- Contenedor de la foto tipo marco elegante -->
+    <div class="reveal" style="width: 100%; max-width: 340px; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-cream); border: 1px solid rgba(197,160,89,.4); background: #fff;">
+      <img 
+        src="foto3.jpg" 
+        alt="Carlos y Sara en el puente" 
+        loading="lazy"
+        style="width: 100%; height: auto; display: block; object-fit: contain;"
+      >
+    </div>
+
+    <!-- Texto de transición integrado debajo de la foto -->
+    <div class="reveal" style="text-align: center; margin-top: 28px; padding: 0 10px;">
+      <p class="eyebrow eyebrow-dark" style="margin-bottom: 8px;">5 años juntos</p>
+      <p style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.25rem; color: var(--burgundy); max-width: 420px; line-height: 1.4;">
+        Y ahora, un camino que recorreremos de la mano para siempre
+      </p>
+    </div>
+
   </div>
-</div>
+</section>
 
 <!-- =========================================================
      LOCATION
